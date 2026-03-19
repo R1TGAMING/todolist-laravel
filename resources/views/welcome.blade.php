@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Laravel</title>
+    <title>TodoList</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
@@ -28,7 +28,7 @@
         @if (Route::has('login'))
             <div class="font-bold flex gap-4 items-center">
                 @auth
-                    <a href="{{ url('/dashboard') }}" class="hover:text-rose-300">Dashboard</a>
+                    <a href="{{ url('/dashboard') }}" class="bg-rose-500 py-2 px-4 rounded-full hover:bg-rose-700">Dashboard</a>
                 @else
                     <a href="{{ route('login') }}" class="hover:text-rose-300">Log in</a>
                     <a href="{{ route('register') }}" class="bg-rose-500 py-2 px-4 rounded-full hover:bg-rose-700">Register</a>
@@ -257,11 +257,6 @@
 
         <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
             @auth
-                <a href="{{ url('/dashboard') }}"
-                    class="bg-rose-500 text-white font-bold py-3 px-8 rounded-full hover:bg-rose-700 transition duration-300 shadow-lg shadow-rose-500/30">
-                    Go to Dashboard
-                </a>
-            @else
                 <a href="{{ route('register') }}"
                     class="bg-rose-500 text-white font-bold py-3 px-8 rounded-full hover:bg-rose-700 transition duration-300 shadow-lg shadow-rose-500/30">
                     Get Started Free
@@ -274,8 +269,7 @@
         </div>
     </section>
 
-    <div
-        class="p-2  text-center text-sm text-[#1b1b18]/60 dark:text-[#FDFDFC]/60">
+    <div class="p-2  text-center text-sm text-[#1b1b18]/60 dark:text-[#FDFDFC]/60">
         &copy; {{ date('Y') }} TodoList.p. All rights reserved.
     </div>
 </body>
